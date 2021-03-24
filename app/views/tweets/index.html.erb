@@ -7,7 +7,7 @@
       </span>
       <p>
         <%= link_to tweet.video_url.to_s do %>
-        <%= video_tag(tweet.video.to_s) %>
+        <%= video_tag(tweet.video.to_s, size: "600x400") %>
         <% end %>
       </p>
     </div>
