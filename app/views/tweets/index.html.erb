@@ -7,11 +7,14 @@
       </span>
       <p>
         <%= link_to tweet.video_url.to_s do %>
-        <%= video_tag(tweet.video.to_s, size: "600x400") %>
+        <%= video_tag(tweet.video.to_s, size: "600x400", :loop => true, :autoplay => true, :muted => true) %>
         <% end %>
         <div class="more">
           <span><%= image_tag 'arrow_top.png' %></span>
           <ul class="more_list">
+            <li>
+              <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+            </li>
             <li>
               <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
             </li>
