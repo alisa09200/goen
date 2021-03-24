@@ -5,6 +5,11 @@
       <span class="name">
         <%= tweet.name %>
       </span>
+      <p>
+        <%= link_to tweet.video_url.to_s do %>
+        <%= video_tag(tweet.video.to_s) %>
+        <% end %>
+      </p>
     </div>
   <% end %>
 </div>
