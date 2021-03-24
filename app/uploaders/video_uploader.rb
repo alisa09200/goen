@@ -37,7 +37,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # For images you might use something like this:
   def extension_allowlist
      %w(jpg jpeg gif png MOV wmv mp4)
-  # end
+  end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
