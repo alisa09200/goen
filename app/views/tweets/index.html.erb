@@ -1,10 +1,12 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
     <div class="content_post" style="background-image: url(<%= tweet.video %>);">
-      <p><%= tweet.text %></p>
       <span class="name">
-        <%= tweet.name %>
+        <a href="/users/<%= tweet.user.id %>">
+          <span>投稿者</span><%= tweet.user.nickname %>
+        </a>
       </span>
+      <p><%= tweet.text %></p>
       <p>
         <%= link_to tweet.video_url.to_s do %>
         <%= video_tag(tweet.video.to_s, size: "600x400", :loop => true, :autoplay => true, :muted => true) %>
