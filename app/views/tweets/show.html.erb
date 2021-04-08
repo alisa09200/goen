@@ -10,6 +10,8 @@
         <%= link_to @tweet.video_url.to_s do %>
         <%= video_tag(@tweet.video.to_s, size: "600x400", :loop => true, :autoplay => true, :muted => true) %>
         <% end %>
+
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
         <div class="more">
           <span><%= image_tag 'arrow_top.png' %></span>
           <ul class="more_list">
@@ -21,6 +23,7 @@
             </li>
           </ul>
         </div>
+        <% end %>
       </p>
   </div>
 </div>
