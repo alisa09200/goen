@@ -1,5 +1,5 @@
 <div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
+  <p><%= @nickname %>先生の授業PR一覧</p>
   <% @tweets.each do |tweet| %>
     <div class="content_post" style="background-image: url(<%= tweet.video %>);">
       <p><%= tweet.text %></p>
