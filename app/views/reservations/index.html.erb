@@ -1,0 +1,14 @@
+<%= month_calendar events: @reservations do |date, reservations| %>
+  <%= date.day %>
+  <% reservations.each do |reservation| %>
+    <div>
+    <% if reservation.tweet_id == @tweet.id %>
+      <%= reservation.name %><!--%= link_to '詳細', tweet_reservation(params[:id]) %-->
+      <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
+      <%= reservation.content %>
+    <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to '予約する', new_tweet_reservation_path(params[:tweet_id]) %>
