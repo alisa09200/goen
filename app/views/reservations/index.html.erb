@@ -3,7 +3,7 @@
   <% reservations.each do |reservation| %>
     <div>
     <% if reservation.tweet_id == @tweet.id %>
-      <%= reservation.name %><!--%= link_to '詳細', tweet_reservation(params[:id]) %-->
+      <%= reservation.name %><%= link_to '[削除]', "/reservations/#{reservation.id}", method: :delete %>
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.content %>
     <% end %>

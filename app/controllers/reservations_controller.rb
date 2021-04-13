@@ -23,13 +23,14 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find(params[:tweet_id])
+    #@tweet = Tweet.find(params[:tweet_id])
     @reservation = Reservation.find(params[:id])
   end
 
   def destroy
     #@tweet = Tweet.find(params[:tweet_id])
-    #@reservation = Reservation.find(params[:id])
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
   end
 
   private
