@@ -18,7 +18,7 @@ class ReservationsController < ApplicationController
 
   def create
     Reservation.create(reservation_params)
-    redirect_to root_path
+    #redirect_to root_path
     #redirect_to "/tweets/#{reservation.tweet.id}"
   end
 
