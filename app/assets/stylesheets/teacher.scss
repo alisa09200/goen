@@ -1,3 +1,15 @@
-// Place all the styles related to the teacher controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.teacher-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border: solid;
+  border-color: lightblue;
+  border-radius: 40px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
