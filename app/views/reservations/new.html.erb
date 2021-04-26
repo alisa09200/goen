@@ -1,10 +1,10 @@
-<h1>テスト</h1>
+<h1>予約する</h1>
 
 <%= form_with(model: [@tweet, @reservation], local: true) do |form| %>
 
   <div class="name">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= current_user.nickname %>
   </div>
 
     <div class="time">
