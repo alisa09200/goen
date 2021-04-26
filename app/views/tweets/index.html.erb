@@ -3,9 +3,10 @@
     <div class="content_post" style="background-image: url(<%= tweet.video %>);">
       <span class="name">
         <a href="/users/<%= tweet.user.id %>">
-          <span>予約はこちら</span><%= tweet.user.nickname %>先生
+          <span>たいけん じゅぎょう よやく</span><%= tweet.user.nickname %>先生の体験授業を予約する
         </a>
       </span>
+
       <p><%= tweet.text %></p>
       <p>
         <%= link_to tweet.video_url.to_s do %>
