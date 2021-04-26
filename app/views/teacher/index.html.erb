@@ -11,7 +11,8 @@
 <div class="content">
   <% if user_signed_in? %>
     <div class="grid-6">
-      <%= link_to "動画を投稿する投稿", tweets_path, class: 'btn btn-default' %>
+      <%= link_to "動画を投稿する", new_tweet_path, class: 'btn btn-default' %>
+      <%= link_to "他の先生の動画を見てみる", tweets_path, class: 'btn btn-default' %>
     </div>
   <% else %>
     <strong><p>※※※ 動画の投稿には新規登録/ログインが必要です ※※※</p></strong>
