@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'teacher/index'
+  get 'teacher/show'
   get 'main/index'
   get 'main/show'
   devise_for :users
