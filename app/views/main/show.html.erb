@@ -13,13 +13,19 @@
       <br>
       まずは会員登録から始めましょう！！
   </div>
-  <div class="content">
+
+<div class="content">
+  <% if user_signed_in? %>
+    <div class="grid-6">
+      <%=link_to "トップページ", root_path, data: {"turbolinks" => false}, class: 'btn btn-default' %>
+    </div>
+  <% else %>
     <div class="grid-6">
       <%=link_to "会員登録", new_user_registration_path, class: 'btn btn-default' %>
       <%=link_to "トップページ", root_path, data: {"turbolinks" => false}, class: 'btn btn-default' %>
-      <br>
     </div>
-  </div>
+  <% end %>
+</div>
 
 
 
