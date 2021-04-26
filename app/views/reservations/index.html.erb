@@ -2,13 +2,17 @@
   <%= date.day %>
   <% reservations.each do |reservation| %>
     <div>
-    <% if reservation.tweet_id == @tweet.id %>
-      <%= reservation.name %><%= link_to '[削除]', "/reservations/#{reservation.id}", method: :delete %>
+    <% if reservation.user_id == current_user.id %>
+      <%= reservation.user.nickname %><%= link_to '[削除]', "/reservations/#{reservation.id}", method: :delete %>
+      <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
+      <%= reservation.content %>
+    <% else %>
+      <%= reservation.user.nickname %>
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.content %>
     <% end %>
     </div>
   <% end %>
 <% end %>
-
-<%= link_to '予約する', new_tweet_reservation_path(params[:tweet_id]) %>
+<br>
+<%= link_to '予約する', new_tweet_reservation_path(params[:tweet_id]), class: 'btn btn-default' %>
