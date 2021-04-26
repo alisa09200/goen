@@ -15,7 +15,8 @@
       <%= link_to "他の先生の動画を見てみる", tweets_path, class: 'btn btn-default' %>
     </div>
   <% else %>
-    <strong><p>※※※ 動画の投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <strong><p>※動画の投稿には新規登録/ログインが必要です※</p></strong>
+    <p><%= link_to "他の先生の動画を見てみる", tweets_path, class: 'btn btn-default' %></p>
   <% end %>
 </div>
 
