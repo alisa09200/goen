@@ -893,7 +893,7 @@ div.contents.row div.content_post .more {
   position: absolute;
   cursor: pointer;
   top: 20px;
-  right: 30px;
+  right: 60px;
   z-index: 2;
   height: 100px;
   width: 80px;
@@ -907,7 +907,7 @@ div.contents.row div.content_post .more:hover ul.more_list {
 div.contents.row div.content_post .more ul.more_list {
   position: absolute;
   text-align: left;
-  width: 80px;
+  width: 140px;
   right: 0;
   font-size: 12px;
   background-color: #fff;
@@ -928,6 +928,8 @@ div.contents.row div.content_post .more ul.more_list li:last-child {
 div.contents.row div.content_post .more ul.more_list li a {
   display: block;
   padding: 5px;
+  width: 140px;
+  font-size: 20px;
 }
 
 div.contents.row div.content_post .more ul.more_list li a:hover {
