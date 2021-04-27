@@ -5,7 +5,10 @@
       <%= form.label :２〜３分の動画 %>　※ファイル形式はMP4,MOV,WMVでお願いします
       <br>　　　　　　　　※簡単に授業内容の説明をすると良いと思います。
       <%= form.file_field :video, :accept => 'video/*' %>
-      <%= form.text_area :text, placeholder: "動画の左下に表示されるテキストです。短いご説明を願いします。                  例）初級　文法　", rows: "10" %>
+      <%= form.label :レベル %>
+      <%= form.select :level, ['初級', '中級', '上級'] %>
+      <%= form.label :内容 %>
+      <%= form.select :text, ['会話', '発音', '文法', '読解', '作文', 'その他'] %>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
