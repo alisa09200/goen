@@ -1,0 +1,38 @@
+<%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @tweets.each do |tweet| %>
+    <div class="content_post" style="background-image: url(<%= tweet.video %>);">
+      <span class="name">
+        <a href="/users/<%= tweet.user.id %>">
+          <span>たいけん じゅぎょう よやく</span><%= tweet.user.nickname %>先生の体験授業を予約する
+        </a>
+      </span>
+
+      <p><%= tweet.level %>  <%= tweet.text %></p>
+      <p>
+        <%= link_to tweet.video_url.to_s do %>
+        <%= video_tag(tweet.video.to_s, size: "600x400", :loop => true, :autoplay => true, :muted => true) %>
+        <% end %>
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to 'せんせいにメッセージをおくる', tweet_path(tweet.id), method: :get %>
+            </li>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <li>
+                <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+              </li>
+              <li>
+                <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </p>
+    </div>
+  <% end %>
+</div>
