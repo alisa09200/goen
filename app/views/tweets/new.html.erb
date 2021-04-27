@@ -6,9 +6,9 @@
       <br>　　　　　　　　※簡単に授業内容の説明をすると良いと思います。
       <%= form.file_field :video, :accept => 'video/*' %>
       <%= form.label :レベル %>
-      <%= form.select :level, ['初級', '中級', '上級'] %>
+      <%= form.select :level, ['しょきゅう', '中級', '上級'] %>
       <%= form.label :内容 %>
-      <%= form.select :text, ['会話', '発音', '文法', '読解', '作文', 'その他'] %>
+      <%= form.select :text, ['かいわ', 'はつおん', 'ぶんぽう', 'どっかい', 'さくぶん', 'そのた'] %>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
