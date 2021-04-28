@@ -36,7 +36,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:name, :content, :start_time).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
+    params.require(:reservation).permit(:name, :content, :start_time, :level).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
   end
 
 end
