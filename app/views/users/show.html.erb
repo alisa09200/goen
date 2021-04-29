@@ -1,6 +1,7 @@
 <div class="contents row">
 <br>
   <p><%= link_to '予約をする', tweet_reservations_path(params[:id]), class: 'btn btn-default' %></p>
+  <p><%= link_to '先生予定登録', tweet_reservations_path(params[:id]), class: 'btn btn-default' %></p>
   <p><%= @nickname %>先生の授業PR一覧</p>
   <% @tweets.each do |tweet| %>
     <div class="content_post" style="background-image: url(<%= tweet.video %>);">

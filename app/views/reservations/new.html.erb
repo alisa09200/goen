@@ -17,22 +17,28 @@
 
 <div class="contents row">
   <div class="container">
-    <h3>予約する</h3>
+    <h3>よやくする</h3>
 
     <%= form_with(model: [@tweet, @reservation], local: true) do |form| %>
 
   
-      <%= form.label :name %>
+      <%= form.label :なまえ %>
       <%= current_user.nickname %><br>
   
-      <%= form.label :start_time %>
+      <%= form.label :かいしじかん %>
       <%= form.datetime_select :start_time %>
 
-      <%= form.label :content %>
-      <%= form.select :content, ['かいわ', 'はつおん', 'ぶんぽう', 'どっかい', 'さくぶん', 'そのた'] %>
+      <%= form.label :おわりじかん %>
+      <%= form.datetime_select :end_time %>
 
-      <%= form.label :level %>
-      <%= form.select :level, ['しょきゅう', '中級', '上級'] %>
+      <%= form.label :ないよう %>
+      <%= form.select :content, ['かいわ', 'はつおん', 'ぶんぽう', 'どっかい', 'さくぶん', 'そのた', ''] %>
+
+      <%= form.label :レベル %>
+      <%= form.select :level, ['しょきゅう', '中級', '上級', ''] %>
+
+      <%= form.label :先生記入欄 %>
+      <%= form.text_area :schedule, placeholder: "!!ここは せんせいだけ かきます!!  　　　　　　　　　　　　　　　　　　　　　　　先生へ：時間、内容、レベルは空欄で大丈夫です" %>
 
       <%= form.submit %>
     <% end%>

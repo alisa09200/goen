@@ -16,6 +16,14 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
+  def edit
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+    @tweet = Tweet.find(params[:tweet_id])
+    @reservation = Reservation.new
+  end
+
   def create
     Reservation.create(reservation_params)
     #redirect_to root_path
@@ -36,7 +44,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:name, :content, :start_time, :level).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
+    params.require(:reservation).permit(:name, :content, :start_time, :level, :end_time, :schedule).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
   end
 
 end

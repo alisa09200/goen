@@ -7,14 +7,18 @@
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.level %>
       <%= reservation.content %>
+      <%= reservation.schedule %>
     <% else %>
       <%= reservation.user.nickname %>
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.level %>
       <%= reservation.content %>
+      <%= reservation.schedule%>
     <% end %>
     </div>
   <% end %>
 <% end %>
 <br>
-<%= link_to '予約する', new_tweet_reservation_path(params[:tweet_id]), class: 'btn btn-default' %>
+<%= link_to '予約する', new_tweet_reservation_path(params[:tweet_id]), class: 'btn btn-default' %><br>
+<h3>※みどりいろ せんせいの じかんをみて よやくしてください</h3><br>
+<%= link_to '先生予定登録', new_tweet_reservation_path(params[:tweet_id]), class: 'btn btn-default' , data: { confirm: "【かくにん】あなたは ほんとうに せんせい ですか？" } %>
