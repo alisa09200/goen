@@ -7,11 +7,13 @@
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.level %>
       <%= reservation.content %>
+      <%= reservation.schedule %>
     <% else %>
       <%= reservation.user.nickname %>
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
       <%= reservation.level %>
       <%= reservation.content %>
+      <%= reservation.schedule%>
     <% end %>
     </div>
   <% end %>
