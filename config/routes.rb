@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #root to: 'tweets#index'
   root to: 'main#index'
   resources :tweets do
-    resources :reservations, only: [:index, :new, :create]
+    resources :reservations, only: [:index, :new, :create, :edit]
     resources :comments, only: :create
     collection do
       get 'search'
