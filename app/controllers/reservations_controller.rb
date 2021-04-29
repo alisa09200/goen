@@ -16,6 +16,14 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
+  def edit
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+    @tweet = Tweet.find(params[:tweet_id])
+    @reservation = Reservation.new
+  end
+
   def create
     Reservation.create(reservation_params)
     #redirect_to root_path
