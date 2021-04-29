@@ -28,11 +28,17 @@
       <%= form.label :かいしじかん %>
       <%= form.datetime_select :start_time %>
 
+      <%= form.label :おわりじかん %>
+      <%= form.datetime_select :end_time %>
+
       <%= form.label :ないよう %>
       <%= form.select :content, ['かいわ', 'はつおん', 'ぶんぽう', 'どっかい', 'さくぶん', 'そのた', ''] %>
 
       <%= form.label :レベル %>
       <%= form.select :level, ['しょきゅう', '中級', '上級', ''] %>
+
+      <%= form.label :先生記入欄 %>
+      <%= form.text_area :schedule, placeholder: "!!ここは せんせいだけ かきます!!  　　　　　　　　　　　　　　　　　　　　　　　先生へ：ないようとレベルは空欄で大丈夫です" %>
 
       <%= form.submit %>
     <% end%>
