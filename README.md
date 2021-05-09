@@ -44,7 +44,7 @@ Javascript/jQuery
 
 ## DB設計
 
-## users テーブル
+### users テーブル
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
@@ -52,7 +52,7 @@ Javascript/jQuery
 | email              | string | null: false |
 | encrypted_password | string | null: false |
 
-### Association
+#### Association
 
 - has_many :tweets
 - has_many :comments
