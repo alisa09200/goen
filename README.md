@@ -26,7 +26,7 @@ https://goen-32399.herokuapp.com/<br>
 
 ## DEMO
 
-![トップ画像](./images/goen_top.mp4)
+![トップ画像](goen_top.jpg)
 
 ## 工夫したポイント
 先生が2~3分の体験授業紹介の動画を投稿することにより、学習者に興味を持ってもらえるように工夫しました。<br>
