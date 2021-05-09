@@ -42,6 +42,16 @@ Javascript/jQuery
 
 ## 課題や今後実装したい機能
 
+### ユーザーの使い分け
+現状、先生と学習者で同じ機能になってしまっているので、ユーザー管理機能を先生と学習者で分けて、使える機能を分けて実装したいです。具体的には動画とスケジュールの投稿は先生のみ、体験授業予約と削除は学習者のみ、メッセージは先生と学習者の両方ができるようにしたいです。
+現在は「先生動画投稿」「先生専用ページ」に学習者が間違えてアクセスしないように、この2つのボタンを押すと「あなたは本当に先生ですか？」というアラートが出るようになっています。
+
+### 通知機能
+現状、先生がカレンダーを確認すると、学習者からの体験授業の予約が入ったことがわかる状態ですが、通知機能をつけて、学習者が予約したら、先生に通知メールが来るように実装したいです。
+
+### テストコード
+テストコードの記載がまだなので、単体テストを実装する予定です。
+
 ## DB設計
 
 ### users テーブル
@@ -59,7 +69,7 @@ Javascript/jQuery
 - has_many :reservations
 
 
-## tweets テーブル
+### tweets テーブル
 
 | Column  | Type     | Options      |
 | ------- | -------- | ------------ |
@@ -69,14 +79,14 @@ Javascript/jQuery
 | level   | string   | null: false  |
 
 
-### Association
+#### Association
 
 - belongs_to :user
 - has_many :comments
 - has_many :reservations
 
 
-##  reservationsテーブル
+###  reservationsテーブル
 
 | Column     | Type       | Options   |
 | ---------- | ---------- | --------- |
@@ -88,13 +98,13 @@ Javascript/jQuery
 | tweet_id   | integer    |           |
 | schedule   | text       |           |
 
-### Association
+#### Association
 
 - belongs_to :user
 - belongs_to :tweet
 
 
-## comments テーブル
+### comments テーブル
 
 | Column   | Type       | Options |
 | -------- | ---------- | ------- |
@@ -102,7 +112,7 @@ Javascript/jQuery
 | user_id  | integer    |         |
 | tweet_id | integer    |         |
 
-### Association
+#### Association
 
 - belongs_to :tweet
 - belongs_to :user
