@@ -20,7 +20,7 @@
 ## 本番環境
 https://goen-32399.herokuapp.com/<br>
 テストアカウント<br>
-先生　Email:tani@tani パスワード：mako00<br>
+先生　Email:yamazaki@yamazaki パスワード：mako00<br>
 学習者　Email:mako@mako パスワード:mako00<br>
 
 ## 制作背景
