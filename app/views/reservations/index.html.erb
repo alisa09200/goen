@@ -2,6 +2,7 @@
   <%= date.day %>
   <% reservations.each do |reservation| %>
     <div>
+    <% if reservation.tweet_id == @tweet.id %>
     <% if reservation.user_id == current_user.id %>
       <%= reservation.user.nickname %><%= link_to '[削除]', "/reservations/#{reservation.id}", method: :delete %>
       <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
@@ -14,6 +15,7 @@
       <%= reservation.level %>
       <%= reservation.content %>
       <%= reservation.schedule%>
+    <% end %>
     <% end %>
     </div>
   <% end %>
