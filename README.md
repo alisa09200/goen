@@ -9,6 +9,7 @@
 
 ## 本番環境
 https://goen-32399.herokuapp.com/<br>
+※テストログイン機能を実装したのでお気軽にご覧ください
 ## テストアカウント<br>
 #### 先生　
 Email:yamazaki@yamazaki<br>
