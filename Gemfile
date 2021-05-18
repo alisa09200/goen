@@ -58,3 +58,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem "simple_calendar", "~> 2.0"
+gem "aws-sdk-s3", require: false
