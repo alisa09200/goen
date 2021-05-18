@@ -5,7 +5,7 @@
   <p><%= @nickname %>先生の授業PR一覧</p>
   <% @tweets.each do |tweet| %>
     <div class="content_post" style="background-image: url(<%= tweet.video %>);">
-      <p><%= tweet.text %></p>
+      <p><%= tweet.level %>  <%= tweet.text %></p>
       <p>
         <%= link_to tweet.video_url.to_s do %>
         <%= video_tag(tweet.video.to_s, size: "600x400", :loop => true, :autoplay => true, :muted => true) %>
